@@ -100,7 +100,7 @@ public class Proje7POM extends Parent{
 
     //--------------------------------------------------------
 
-    @FindBy(xpath="//img[@alt=\"Fusion Backpack\"]")
+    @FindBy(xpath="//img[@alt=\"Push It Messenger Bag\"]")
     private WebElement fusionBackpack;
 
     @FindBy(id="product-addtocart-button")
@@ -123,7 +123,6 @@ public class Proje7POM extends Parent{
 
     @FindBy(xpath="//span[text()=\"Thank you for your purchase!\"]")
     private WebElement thankYouOrder;
-
 
 
 
@@ -193,19 +192,6 @@ public class Proje7POM extends Parent{
         }
 
         verifyContainsText(myElement,text);
-    }
-
-    public void searchAndDelete(String searchText){
-
-        findAndSend("searchInput",searchText);//arama kutucuguna kelimeyi yaz
-        findAndClick("searchButton");//arama butonuna bas
-
-        waitUntilLoading();
-
-        //GWD.Bekle(2);  // TODO: incelenecek
-        findAndClick("deleteButton");//silme butonuna bas
-        findAndClick("deleteDialogButton");//dialogdaki silme butonuna bas
-
     }
 
 }

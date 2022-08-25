@@ -62,4 +62,10 @@ public class CreateAccountSteps {
         WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//img[@alt=\"Loading...\"]")));
     }
+
+    @And("wait text to be welcome")
+    public void waitTextToBeWelcome() {
+        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.xpath("(//li[@class=\"greet welcome\"]/span)[1]"),"Welcome, grup2 proje7!"));
+    }
 }

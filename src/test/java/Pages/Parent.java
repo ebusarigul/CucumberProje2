@@ -31,8 +31,6 @@ public class Parent {
 
     public void clickFunction(WebElement element)
     {
-
-        waitUntilVisible(element);
         waitUntilClickable(element); // tıklanabilir olana kadar bekle
         scrollToElement(element); // elemente scroll yap
 
@@ -47,15 +45,7 @@ public class Parent {
     public void verifyContainsText(WebElement element, String text)
     {
         waitUntilVisible(element); // gözükene kadar bekle
-      //WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
-      //wait.until(ExpectedConditions.stalenessOf(element));
-        GWD.Bekle(4);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
-    }
-
-    public void waitUntilLoading() {
-        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
 
 }

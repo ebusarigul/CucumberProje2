@@ -121,7 +121,7 @@ public class DialogContent extends Parent{
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
-        waitUntilLoading();
+        //waitUntilLoading();
 
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas

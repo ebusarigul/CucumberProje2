@@ -9,8 +9,11 @@ Feature: Payment Func
       | pass  | qweasd.123          |
     When Click a Button
       | send2 |
+
+    And wait text to be welcome
+
     Then Verify that your account has been opened
-     | welcome | Welcome |
+     | welcome | welcome |
 
   Scenario: product purchase
     When Click a Button
