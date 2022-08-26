@@ -32,7 +32,7 @@ public class Parent {
     public void clickFunction(WebElement element)
     {
         waitUntilClickable(element); // tıklanabilir olana kadar bekle
-        scrollToElement(element); // elemente scroll yap
+        //scrollToElement(element); // elemente scroll yap
 
         element.click(); // click yap
     }

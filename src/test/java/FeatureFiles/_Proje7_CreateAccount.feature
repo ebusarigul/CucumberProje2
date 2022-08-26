@@ -10,7 +10,7 @@ Feature:Create Account Functionality
 
       | firstname            | grup2               |
       | lastname             | proje7              |
-      | emailaddress         | esargl148@gmail.com |
+      | emailaddress         | esargl149@gmail.com |
       | password             | qweasd.123          |
       | passwordconfirmation | qweasd.123          |
 

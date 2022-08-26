@@ -100,8 +100,14 @@ public class Proje7POM extends Parent{
 
     //--------------------------------------------------------
 
-    @FindBy(xpath="//img[@alt=\"Push It Messenger Bag\"]")
-    private WebElement fusionBackpack;
+    @FindBy(xpath="//a[@title=\"Argus All-Weather Tank\"]")
+    private WebElement tanktop;
+
+    @FindBy(xpath="//div[@id=\"option-label-size-143-item-168\"]")
+    private WebElement size;
+
+    @FindBy(css="#option-label-color-93-item-52")
+    private WebElement color;
 
     @FindBy(id="product-addtocart-button")
     private WebElement addToCart;
@@ -167,12 +173,14 @@ public class Proje7POM extends Parent{
             case "england" : myElement =england; break;
             case "ukraine" : myElement =ukraine; break;
             case "addNewAddress" : myElement =addNewAddress; break;
-            case "fusionBackpack" : myElement =fusionBackpack; break;
+            case "tanktop" : myElement =tanktop; break;
             case "addToCart" : myElement =addToCart; break;
             case "showcart" : myElement =showcart; break;
             case "prodecedCheckout" : myElement =prodecedCheckout; break;
             case "next" : myElement =next; break;
             case "placeOrder" : myElement =placeOrder; break;
+            case "size" : myElement =size; break;
+            case "color" : myElement =color; break;
 
         }
 

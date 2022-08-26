@@ -7,12 +7,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+
+import static Utilities.GWD.driver;
 
 public class CreateAccountSteps {
 
@@ -59,13 +62,14 @@ public class CreateAccountSteps {
 
     @And("invisible loading")
     public void invisibleLoading() {
-        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//img[@alt=\"Loading...\"]")));
     }
 
     @And("wait text to be welcome")
     public void waitTextToBeWelcome() {
-        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.textToBe(By.xpath("(//li[@class=\"greet welcome\"]/span)[1]"),"Welcome, grup2 proje7!"));
     }
+
 }

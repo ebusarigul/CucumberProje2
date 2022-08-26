@@ -8,11 +8,13 @@ Feature: Login Func
       | signIn |
 
     And fill in the information
-      | email | esargl147@gmail.com |
+      | email | esargl149@gmail.com |
       | pass  | qweasd.123          |
 
     When Click a Button
       | send2 |
 
+    And wait text to be welcome
+
     Then Verify that your account has been opened
-      | welcome |Welcome|
+      | welcome | welcome |
